@@ -59,6 +59,7 @@ app.put('/api/estudiantes/:id', (req, res) => {
 });
 
 // 5. ELIMINAR ESTUDIANTE (DELETE)
+// Comentario para prueba de PR
 app.delete('/api/estudiantes/:id', (req, res) => {
     const index = estudiantes.findIndex(e => e.id === parseInt(req.params.id));
     if (index === -1) return res.status(404).json({ error: "Estudiante no encontrado" });
